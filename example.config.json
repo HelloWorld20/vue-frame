@@ -1,0 +1,48 @@
+{
+	"NODE_ENV": "development",
+	"port": 4000,
+	"session": {
+		"secret": "session.id",
+		"resave": false
+	},
+	"redis": {
+		"app": {
+			"server": {
+				"host": "127.0.0.1",
+				"name": "app",
+				"port": 6379,
+				"password": ""
+			}
+		},
+		"session": {
+			"server": {
+				"host": "127.0.0.1",
+				"name": "session",
+				"port": 6379,
+				"password": ""
+			}
+		}
+	},
+	"mongo": {
+		"host": "127.0.0.1",
+		"port": 27017,
+		"user": "user",
+		"password": ""
+	},
+	"wechat": {
+		"AppId": "",
+		"AppSecret": ""
+	},
+	"cos": {
+		"SecretId": "",
+		"SecretKey": "",
+		"Bucket": {
+			"app": "",
+			"market": ""
+		},
+		"Region": ""
+	},
+	"allowOrigins": ["http://localhost:3000"],
+    "CDN": "",
+    "wechatServerValid": false
+}

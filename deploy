@@ -1,0 +1,30 @@
+#!/bin/sh
+npm i &&
+
+cd static
+
+npm i &&
+
+cd ../server
+
+npm i &&
+
+cd ../
+
+npm run build-server && npm run build-static && echo "build-finished!"
+
+rm -rf ./var/server
+
+mkdir var/server
+
+cp -r ./server/dist/ ./var/server
+
+cp ./server/package.json ./var/server/package.json
+
+node ./upload.js &&
+
+cd ./var/server
+# 这里暂时必须安装，打包server端时，不会吧node_modules的东西搬过来
+npm i && echo "deploy finished!"
+
+

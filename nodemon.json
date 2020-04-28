@@ -1,0 +1,18 @@
+{
+    "verbose": true,
+    "ext": "ts js",
+    "legacyWatch": true,
+    "watch": ["server/src"],
+    "ignore": ["node_modules", "dist",".git"],
+    "exec": "node -r ts-node/register --inspect=4005 ./server/src/index.ts",
+    "env": {
+      "PORT": 12000,
+      "NODE_ENV": "development",
+      "RUNTIME_ENV": "dev",
+      "DEBUG": "express:*,config,framework*,renderer:*",
+      "TS_NODE_CACHE": false,
+      "TS_NODE_TYPE_CHECK": true,
+      "TS_NODE_FILES": true,
+      "TS_NODE_PROJECT": "server/tsconfig.json"
+    }
+  }

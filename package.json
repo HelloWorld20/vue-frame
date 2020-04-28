@@ -1,0 +1,49 @@
+{
+  "name": "liuzhou_market",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "files": [
+    "server",
+    "static"
+  ],
+  "scripts": {
+    "postinstall": "cd server && npm install && cd ../static && npm install && cd ../static-admin && npm install",
+    "dev-static": "cd static && npm run dev",
+    "dev-static-admin": "cd static-admin && npm run dev",
+    "dev-server": "nodemon",
+    "build-static": "cd static && npm run build",
+    "build-server": "cd server && npm run build",
+    "build-static-admin": "cd static-admin && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/HelloWorld20/vue-frame.git"
+  },
+  "keywords": [
+    "vue2", "express", "webpack4", "redis", "mongodb", "less", "typescript"
+  ],
+  "author": "weijianghong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HelloWorld20/vue-frame/issues"
+  },
+  "dependencies": {
+    "@types/sha1": "^1.1.2",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-1": "^6.24.1",
+    "cos-nodejs-sdk-v5": "^2.5.14",
+    "less": "^3.10.3",
+    "nodemon": "^1.19.4",
+    "prettier": "^1.19.1",
+    "ts-node": "^8.4.1",
+    "tslint": "^5.20.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "typescript": "^3.6.4"
+  }
+}
